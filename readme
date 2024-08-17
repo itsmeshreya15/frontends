@@ -1,0 +1,31 @@
+BankFifty is a decentralized application built on blockchain technology. This repository contains the frontend code for the BankFifty application, which interacts with a smart contract deployed on the blockchain. The application allows users to interact with the smart contract through a user-friendly interface.
+
+Features
+Smart Contract Integration: The frontend is integrated with a blockchain smart contract, allowing users to interact with it directly from the web application.
+Real-time Data: The application fetches and displays real-time data from the smart contract, ensuring users have up-to-date information.
+User-friendly Interface: The frontend is designed to be intuitive and easy to use, catering to both novice and experienced users.
+Smart Contract Functions
+The smart contract integrated into the BankFifty frontend includes at least two primary functions:
+
+getBalance()
+
+Description: This function retrieves the current balance of the user's account within the BankFifty smart contract.
+Usage: The value returned by this function is displayed on the frontend, showing the user's account balance in real-time.
+depositFunds(uint256 amount)
+
+Description: This function allows users to deposit a specified amount of funds into their BankFifty account.
+Usage: The frontend provides an input field for users to enter the amount they wish to deposit. Upon submission, the transaction is sent to the smart contract, and the new balance is updated and displayed on the frontend.
+Project Structure
+/src
+
+/components: Reusable React components used across the application.
+/pages: Individual pages of the application, such as the homepage, dashboard, etc.
+/services: Functions that handle communication with the blockchain and smart contract.
+/styles: CSS and styling files.
+/utils: Utility functions and helpers.
+/public
+
+Static assets like images and icons.
+/contracts
+
+ABI (Application Binary Interface) files and other smart contract-related data.
