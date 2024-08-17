@@ -1,31 +1,46 @@
-BankFifty is a decentralized application built on blockchain technology. This repository contains the frontend code for the BankFifty application, which interacts with a smart contract deployed on the blockchain. The application allows users to interact with the smart contract through a user-friendly interface.
+# Stock Portfolio 
+This is a Solidity contract for managing a stock portfolio. It allows users to add stocks to their portfolio and view the details of their stocks.
 
-Features
-Smart Contract Integration: The frontend is integrated with a blockchain smart contract, allowing users to interact with it directly from the web application.
-Real-time Data: The application fetches and displays real-time data from the smart contract, ensuring users have up-to-date information.
-User-friendly Interface: The frontend is designed to be intuitive and easy to use, catering to both novice and experienced users.
-Smart Contract Functions
-The smart contract integrated into the BankFifty frontend includes at least two primary functions:
 
-getBalance()
+Key Features:
 
-Description: This function retrieves the current balance of the user's account within the BankFifty smart contract.
-Usage: The value returned by this function is displayed on the frontend, showing the user's account balance in real-time.
-depositFunds(uint256 amount)
+    >>Adding Stocks: Users can add new stocks to their portfolio by providing the stock name, buy price, and sell price.
+    >>Viewing Stocks: Users can view the details of their stocks, including the stock name, buy price, sell price, and total value.
+    >>Stock Portfolio Management: The contract stores the user's stocks in a mapping, allowing for efficient management and retrieval of stock information.
 
-Description: This function allows users to deposit a specified amount of funds into their BankFifty account.
-Usage: The frontend provides an input field for users to enter the amount they wish to deposit. Upon submission, the transaction is sent to the smart contract, and the new balance is updated and displayed on the frontend.
-Project Structure
-/src
 
-/components: Reusable React components used across the application.
-/pages: Individual pages of the application, such as the homepage, dashboard, etc.
-/services: Functions that handle communication with the blockchain and smart contract.
-/styles: CSS and styling files.
-/utils: Utility functions and helpers.
-/public
+# Description
 
-Static assets like images and icons.
-/contracts
+This Solidity contract, named StockPortfolio, manages a user's stock portfolio by allowing them to add and view their stocks. The contract includes the following features:
 
-ABI (Application Binary Interface) files and other smart contract-related data.
+Functions:
+
+    addStock: Adds a new stock to the user's portfolio.
+    getUserStocksCount: Returns the number of stocks in the user's portfolio.
+    getUserStock: Returns the details of a specific stock in the user's portfolio.
+
+# Getting Started
+
+# Executing program
+
+To run this program, First create a directory , switch to that directory and open it in vs code.
+
+        Run npm i, this will install the dependencies. run npx hardhat node this will create a local blockchain. from the provided private keys copy anyone and import in metamask. open new terminal and run npx hardhat run --network localhost scripts/deploy.js . This will compile and deploy the contract on hardhat node. contract address will be printed in the terminal, copy and paste that address in contractAddress value in src\script.js file. naviage to ../artifacts/contracts/MessageSystem.sol/MessageSystem.json file and copy the abi address which looks like :
+
+    "abi": [
+      {.....}
+     ]
+
+        paste this for the value of contractABI. Now open index.html. in metamask set network to localhost. click connect wallet now you can interact with UI add/remove member as hod/faculity, send messages. And at last can check the designation of member in integer form(in console) by providing its address.
+
+
+
+## Authors
+
+Abhishek Kumar  
+[@Abhishek](https://www.linkedin.com/in/abhishek-kumar-75273024b/)
+
+
+## License
+
+This MyToken is licensed under the MIT License 
